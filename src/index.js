@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Square extends React.Component {
+    // 构造函数
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: null
+        }
+    }
     render() {
       return (
-        <button className="square">
-          {/* TODO */}
+        <button className="square" onClick={() => { this.setState({value: 'x'})}}>
+          {this.state.value}
         </button>
       );
     }
@@ -14,7 +21,7 @@ class Square extends React.Component {
   
   class Board extends React.Component {
     renderSquare(i) {
-      return <Square />;
+      return <Square value={i} />;
     }
   
     render() {
@@ -42,6 +49,20 @@ class Square extends React.Component {
       );
     }
   }
+
+  class ShoppingList extends React.Component {
+      render() {
+          return (
+          <div>
+             <h1>{this.props.name} 的购物列表</h1>
+             <ol>
+                 <li>牙膏</li>
+                 <li>牙刷</li>
+             </ol>
+          </div>
+          )
+      }
+  }
   
   class Game extends React.Component {
     render() {
@@ -49,6 +70,7 @@ class Square extends React.Component {
         <div className="game">
           <div className="game-board">
             <Board />
+            <ShoppingList name="aiyaya"></ShoppingList>
           </div>
           <div className="game-info">
             <div>{/* status */}</div>

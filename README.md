@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## React学习知识点
+
+1. `React.createElement('div', {}, 'hello aiyaya');` 
+用于创建一个react元素，
+参数：
+    1. 元素名（组件名），
+    2. 属性，
+    3. 元素子元素（内容））
+
+2. `ReactDOM.createRoot(document.getElementById('root'))`创建一个根元素

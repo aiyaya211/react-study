@@ -6,10 +6,20 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // 创建根元素
 const div = React.createElement('div', {}, 'hello aiyaya'); // 创建一个react元素
+const btn = React.createElement(
+  'button', 
+  {
+    type: 'button',
+    id: 'btn',
+    // 事件要用驼峰命名（和vue一样
+    onClick: () => {console.log(999)}
+  }, 
+  '我是按钮'
+)
 console.log(div)
 // 将div渲染到根组件之下
 root.render(
-  div
+  btn
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>

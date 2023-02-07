@@ -74,7 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. `React.createElement('div', {}, 'hello aiyaya');` 
 用于创建一个react元素，
 参数：
-    1. 元素名（组件名），
+    1. 元素名（组件名 html标签小写），
     2. 属性，
     3. 元素子元素（内容））
 

@@ -78,4 +78,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     2. 属性，
     3. 元素子元素（内容））
 
-2. `ReactDOM.createRoot(document.getElementById('root'))`创建一个根元素
+2. `ReactDOM.createRoot(document.getElementById('root'))`
+创建一个根元素
+
+3. `render()`
+将react元素渲染到根元素中，根元素中所有的内容都会被替换  
+重复调用render函数只渲染变更部分
+
+4. `jsx`  
+jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转换为js代码
+

@@ -75,7 +75,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 用于创建一个react元素，
 参数：
     1. 元素名（组件名 html标签小写），
-    2. 属性，
+    2. 属性（在设置事件时，需要改成驼峰命名法）
     3. 元素子元素（内容））
 
 2. `ReactDOM.createRoot(document.getElementById('root'))`

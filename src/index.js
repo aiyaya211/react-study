@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 // 创建一个div react元素
 const name = '哎呀呀'
 const div =<div>
-  <div>我是{name}</div>
+  <div onClick={() => alert(888)}>我是{name}</div>
   <button>我是按钮1</button>
 </div>;
 

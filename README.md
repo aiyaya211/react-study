@@ -90,10 +90,12 @@ jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转
 可以看待babel的官网测试一波
 ![babel](https://aiyaya122.oss-cn-hangzhou.aliyuncs.com/babel.jpg)  
 注意事项⚠️：
-    jsx不是字符串，不需要加引号
-    jsx中html标签应该小写开头，react组件应该大写开头
-    jsx中有且仅有一个根元素
-    jsx的标签必须正确结束
+    - jsx不是字符串，不需要加引号
+    - jsx中html标签应该小写开头，react组件应该大写开头
+    - jsx中有且仅有一个根元素
+    - jsx的标签必须正确结束
+    - jsx通过{}插入表达式 类似vue
+    - 属性可以直接在标签中设置
     
 
 

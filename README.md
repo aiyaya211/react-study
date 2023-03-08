@@ -86,5 +86,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 重复调用render函数只渲染变更部分
 
 4. `jsx`  
-jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转换为js代码
+jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转换为js代码 
+可以看待babel的官网测试一波
+![babel](https://aiyaya122.oss-cn-hangzhou.aliyuncs.com/babel.jpg)  
+注意事项⚠️：
+    jsx不是字符串，不需要加引号
+    jsx中html标签应该小写开头，react组件应该大写开头
+    jsx中有且仅有一个根元素
+    jsx的标签必须正确结束
+    
+
+
+
+
+
 

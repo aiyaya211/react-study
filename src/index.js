@@ -5,15 +5,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 // 创建一个react元素
-const button = React.createElement('button', {
-  id: 'btn',
-  onClick: () => {
-    alert('请你点击我！')
-  }
-}, '按钮1');
+// const button = <button>我是按钮</button>
 
 // 创建一个div react元素
-const div = React.createElement('div', {}, ['我是一个div', button]);
+const name = '哎呀呀'
+const div =<div>
+  <div>我是{name}</div>
+  <button>我是按钮1</button>
+</div>;
 
 // 生成一个dom元素
 const root = ReactDOM.createRoot(document.getElementById('root'));

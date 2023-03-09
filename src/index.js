@@ -4,38 +4,33 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// 创建一个react元素
-// const button = <button>我是按钮</button>
+// 创建一个按钮
+// const btn = <button
+//   onClick={changeList}
+// >
+//   点击修改
+// </button>;
 
-// 创建一个div react元素
-const name = '哎呀呀'
-const div =<div>
-  <div onClick={() => alert(888)}>我是{name}</div>
-  <button style={{ color: 'red' }}>我是按钮1</button>
-</div>;
 
-let lang = "en";
-let div1;
-if (lang === 'en') {
-  div1 = <div>hello world</div>
-}
-if (lang === 'ch') {
-  div1 = <div>你好</div>
-}
-// 生成列表
-let list = ['香蕉', '苹果', '橘子'];
-let listArr = [];
+let list = ['苹果', '香蕉', '橘子'];
 
-list.forEach(item => {
-  listArr.push(<li>{item}</li>);
-})
+let listArr = <ul>
+  {list.map(item => <li key={item}>{item}</li>)}
+</ul>
 
-let listDiv = <ul>{list.map(item => <li>{item}</li>)}</ul>
-// 生成一个dom元素
+document.getElementById('btn').onclick = () => {
+  list = [ '菠萝', '苹果', '香蕉', '橘子'];
+  listArr = <ul>
+    {list.map(item => <li key={item}>{item}</li>)}
+  </ul>;
+  root.render(listArr);
+};
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// 渲染
-root.render(listDiv)
+root.render(listArr);
 
 
 

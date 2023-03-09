@@ -83,7 +83,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 3. `render()`
 将react元素渲染到根元素中，根元素中所有的内容都会被替换  
-重复调用render函数只渲染变更部分
+重复调用render函数只渲染变更部分 
+每当调用render()方法的时候，页面就会发生重新渲染（diff）
 
 4. `jsx`  
 jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转换为js代码 
@@ -98,10 +99,11 @@ jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转
     - 属性可以直接在标签中设置
 
 5. 循环列表 
+设置唯一性`key`
 ```javascript
 let list = ['香蕉', '苹果', '橘子'];
 // 用map遍历生成新数组
-let listDiv = <ul>{list.map(item => <li>{item}</li>)}</ul>
+let listDiv = <ul>{list.map(item => <li key={item}>{item}</li>)}</ul>
 // 生成一个dom元素
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // 渲染

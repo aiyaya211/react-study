@@ -11,14 +11,31 @@ import reportWebVitals from './reportWebVitals';
 const name = '哎呀呀'
 const div =<div>
   <div onClick={() => alert(888)}>我是{name}</div>
-  <button>我是按钮1</button>
+  <button style={{ color: 'red' }}>我是按钮1</button>
 </div>;
 
+let lang = "en";
+let div1;
+if (lang === 'en') {
+  div1 = <div>hello world</div>
+}
+if (lang === 'ch') {
+  div1 = <div>你好</div>
+}
+// 生成列表
+let list = ['香蕉', '苹果', '橘子'];
+let listArr = [];
+
+list.forEach(item => {
+  listArr.push(<li>{item}</li>);
+})
+
+let listDiv = <ul>{list.map(item => <li>{item}</li>)}</ul>
 // 生成一个dom元素
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // 渲染
-root.render(div)
+root.render(listDiv)
 
 
 

@@ -96,6 +96,17 @@ jsx就是React.createElement()的语法糖，jsx在执行之前都会被babel转
     - jsx的标签必须正确结束
     - jsx通过{}插入表达式 类似vue
     - 属性可以直接在标签中设置
+
+5. 循环列表 
+```javascript
+let list = ['香蕉', '苹果', '橘子'];
+// 用map遍历生成新数组
+let listDiv = <ul>{list.map(item => <li>{item}</li>)}</ul>
+// 生成一个dom元素
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// 渲染
+root.render(listDiv)
+```
     
 
 

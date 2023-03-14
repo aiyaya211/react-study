@@ -109,6 +109,30 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // 渲染
 root.render(listDiv)
 ```
+6. 工程化 
+spa只有一个容器dom，那就是`index.html`  
+项目目录结构  
+![目录](https://aiyaya122.oss-cn-hangzhou.aliyuncs.com/%E7%9B%AE%E5%BD%95.jpg) 
+
+手动创建的`react`项目结构  
+运行项目启动命令 在本地启动一个服务
+```bash
+npx react-scripts start
+```
+`package.json`中将命令集成
+```json
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+
+
+
+
+
     
 
 

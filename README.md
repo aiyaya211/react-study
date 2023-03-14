@@ -109,16 +109,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // 渲染
 root.render(listDiv)
 ```
-6. 工程化 
+6. 工程化  
 spa只有一个容器dom，那就是`index.html`  
 项目目录结构  
-![目录](https://aiyaya122.oss-cn-hangzhou.aliyuncs.com/%E7%9B%AE%E5%BD%95.jpg) 
-
+![目录](https://aiyaya122.oss-cn-hangzhou.aliyuncs.com/%E7%9B%AE%E5%BD%95.jpg)  
 手动创建的`react`项目结构  
-运行项目启动命令 在本地启动一个服务
+运行项目启动命令 在本地启动一个服务  
 ```bash
 npx react-scripts start
-```
+```  
 `package.json`中将命令集成
 ```json
   "scripts": {
@@ -128,6 +127,16 @@ npx react-scripts start
     "eject": "react-scripts eject"
   },
 ```
+7. 组件化  
+react有两种组件创建方式  
+*函数式组件：*  
+    --函数式组件就是返回jsx的普通函数  
+    --组件的首字母大写  
+*类组件*  
+    --类组件必须要继承React.component  
+    --相比较函数组件，类组件编写较麻烦  
+    
+
 
 
 

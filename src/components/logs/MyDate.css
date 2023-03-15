@@ -1,0 +1,21 @@
+/* 日期样式 */
+.date {
+    width: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* 月份效果 */
+  .month {
+    height: 30px;
+    line-height: 30px;
+    background-color: #d62828;
+    color: #fff;
+  }
+  .day {
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+  }

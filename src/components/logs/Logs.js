@@ -1,9 +1,10 @@
 import LogItem from './LogItem'
 import './logs.css'
 
-const Logs = () => {
+const Logs = (props) => {
     return <div className="logs">
-        <LogItem />
+        {/* 在父组件中可以直接设置子组件的属性 */}
+        <LogItem test="123"/>
     </div>
 }
 

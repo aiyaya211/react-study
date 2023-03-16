@@ -6,10 +6,6 @@ function App() {
   return (
     <div>
       <Logs />
-      <Logs />
-      <Logs />
-      <Logs />
-      <Logs />
     </div>
   );
 }

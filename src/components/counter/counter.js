@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './counter.css'
 
 // 组件名要大写 不然会报错
@@ -11,6 +11,7 @@ const Counter = () => {
 
     // 钩子函数
     const res = useState(1)
+    const h1Ref = useRef()
     console.log(res)
     // let val = res[0]
     // console.log(res)
@@ -28,13 +29,19 @@ const Counter = () => {
         setCount(val - 1)
         // console.log(val)
     };
+    // 获取dom
+    const getDom = () => {
+        let dom = document.getElementById('content')
+        console.log(dom)
+    }
    //  先执行
     return <div className='counter'>
-        <span>{val}</span>
+        <span id="content">{val}</span>
         <div>
             <button onClick={addCount}>增加</button>
             <button onClick={lessCount}>减少</button>
         </div>
+        <button onClick={getDom}>获取dom</button>
     </div>
 }
 

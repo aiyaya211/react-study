@@ -152,7 +152,10 @@ react有两种组件创建方式
 它包含两部分,第一个元素是初始值，直接修改不会触发组件的重新渲染，第二个元素是一个以set开头的方法，可以用来修改state,调用后触发组件的重新渲染  
 ```javascript
     const {val, setCount} = useState(1)
-```
+```  
+11. useRef  
+获取dom信息，类似于vue中的ref属性，在react中需要引入`useRef`，获取当前需要操作的dom对象，组件重新渲染不会重新生成useRef对象  
+
 
 
 

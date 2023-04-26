@@ -2,12 +2,15 @@
 import './App.css';
 import Logs from './components/logs/Logs';
 import Counter from './components/counter/counter'
-import Dcom from './components/Dcom'
+// import Dcom from './components/Dcom'
+// import LogsItem from './components/logsForm/logsForm'
+import LogsForm from './components/logsForm/logsForm';
 
 function App() {
   return (
     <div>
-      <Dcom />
+      {/* <Dcom /> */}
+      <LogsForm></LogsForm>
       <Logs />
       <Counter />
     </div>

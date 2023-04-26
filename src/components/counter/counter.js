@@ -12,6 +12,7 @@ const Counter = () => {
     // 钩子函数
     const res = useState(1)
     const h1Ref = useRef()
+    console.log(h1Ref) // {current: undefined}
     console.log(res)
     // let val = res[0]
     // console.log(res)
@@ -19,24 +20,24 @@ const Counter = () => {
     let setCount = res[1];
     // 再执行
     const addCount = () => {
-        // val++;
         // 会重新渲染组件
         setCount(val + 1)
-        console.log(val)
     };
     const lessCount = () => {
         // 会重新渲染组件
         setCount(val - 1)
-        // console.log(val)
     };
     // 获取dom
     const getDom = () => {
         let dom = document.getElementById('content')
         console.log(dom)
+        console.log(h1Ref) // {current: span#content}
+        // 修改dom内容
+        h1Ref.current.innerText = '修改过了1'
     }
    //  先执行
     return <div className='counter'>
-        <span id="content">{val}</span>
+        <span id="content" ref={h1Ref}>{val}</span>
         <div>
             <button onClick={addCount}>增加</button>
             <button onClick={lessCount}>减少</button>

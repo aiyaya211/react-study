@@ -95,7 +95,18 @@ react有两种组件创建方式
 11. useRef  
 获取dom信息，类似于vue中的ref属性，在react中需要引入`useRef`，获取当前需要操作的dom对象，组件重新渲染不会重新生成useRef对象  
 12. 类组件  
- 类组件中可以直接通过this访问到父组件传过来的props，可以直接在类组件中定义state 获取到state中的数据 类似于vue中的data，通过setState来修改state中的值，获取dom 通过React.createRef();
+ 类组件中可以直接通过this访问到父组件传过来的props，可以直接在类组件中定义state 获取到state中的数据 类似于vue中的data，通过setState来修改state中的值，获取dom 通过React.createRef();  
+13. 双向绑定  
+react中的双向绑定和vue也类似，vue中只是用来语法糖，看着更为简洁，react也是通过value与数据的绑定和触发监听事件来实现useState中存储的数据和改变数据的set方法  
+```javascript
+const [inputDate, setInputDate] = useState('')
+const dateChangeHandler = (e) => {
+    setInputDate(e.target.value)
+}
+```
+```html
+ <input type="date" id="date" onChange={dateChangeHandler} value={inputDate}></input>
+```
 
 
 
